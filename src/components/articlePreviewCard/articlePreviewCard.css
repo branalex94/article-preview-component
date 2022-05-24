@@ -1,0 +1,45 @@
+.main__preview-card {
+  margin: 0 1.5rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  max-width: 20rem;
+  box-shadow: 0px 0px 20px #ccc;
+}
+
+.header__image {
+  width: 100%;
+  height: auto;
+}
+
+.footer__author-info {
+  position: relative;
+  padding: 1rem 0;
+}
+
+@media (min-width: 1024px) {
+  .main__preview-card {
+    display: flex;
+    max-width: 70vw;
+    overflow: visible;
+  }
+
+  .main__header {
+    flex: 4;
+  }
+
+  .header__image {
+    height: 100%;
+    border-radius: 1rem 0 0 1rem;
+  }
+
+  .section__bottom-side {
+    display: flex;
+    flex-direction: column;
+    flex: 7;
+  }
+
+  .footer__author-info {
+    flex: 3;
+  }
+}

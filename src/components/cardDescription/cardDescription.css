@@ -1,0 +1,21 @@
+.section__card-description {
+  margin: 1.5rem 0;
+  padding: 0 1.5rem;
+}
+
+.section__title {
+  color: var(--Very-Dark-Grayish-Blue);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.section__text {
+  color: var(--Desaturated-Dark-Blue);
+  font-size: 0.8rem;
+}
+
+@media (min-width: 1024px) {
+  .section__card-description {
+    flex: 5;
+  }
+}

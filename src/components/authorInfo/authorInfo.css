@@ -95,4 +95,12 @@ div.article__author-desc {
     border-radius: 0.5rem;
     box-shadow: 0px 0px 20px #ccc;
   }
+
+  .article__icon-container {
+    cursor: pointer;
+  }
+
+  .article__icon-container.share__icon--active--desktop {
+    background: var(--Desaturated-Dark-Blue);
+  }
 }

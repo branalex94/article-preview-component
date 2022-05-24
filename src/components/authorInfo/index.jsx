@@ -1,5 +1,5 @@
 import "./authorInfo.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ShareIcon from "../../icons/share";
 import FBIcon from "../../icons/FB";
 import TwIcon from "../../icons/tw";
@@ -9,7 +9,6 @@ export default function AuthorInfo({ avatar, name, date }) {
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(true);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
-  // const viewportSize = useRef(window.innerWidth);
 
   const handleClick = () => {
     setIsShareModalOpen(!isShareModalOpen);
@@ -23,28 +22,6 @@ export default function AuthorInfo({ avatar, name, date }) {
     return () => window.removeEventListener("resize", resize);
   }, [windowSize]);
 
-  // if (isShareModalOpen) {
-  //   return (
-  //     <article className="article__share-modal">
-  //       <div className="article__share-text">
-  //         <p>Share</p>
-  //       </div>
-  //       <div className="article__share-icons">
-  //         <FBIcon />
-  //         <TwIcon />
-  //         <PintIcon />
-  //       </div>
-  //       {isMobile && (
-  //         <div className="article__author-share active" onClick={handleClick}>
-  //           <div className="article__icon-container--active">
-  //             <ShareIcon color="#fff" />
-  //           </div>
-  //         </div>
-  //       )}
-  //     </article>
-  //   );
-  // }
-
   return (
     <>
       <article className="article__author-info">
@@ -56,8 +33,12 @@ export default function AuthorInfo({ avatar, name, date }) {
           <p className="article__author-date">{date} </p>
         </div>
         <div className="article__author-share" onClick={handleClick}>
-          <div className="article__icon-container">
-            <ShareIcon />
+          <div
+            className={`article__icon-container ${
+              isShareModalOpen ? "share__icon--active--desktop" : ""
+            }`}
+          >
+            <ShareIcon color={isShareModalOpen ? "#fff" : ""} />
           </div>
         </div>
       </article>

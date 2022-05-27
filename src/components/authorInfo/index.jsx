@@ -43,25 +43,27 @@ export default function AuthorInfo({ avatar, name, date }) {
         </div>
       </article>
       {/* Share overlay starts here */}
-      {isShareModalOpen && (
-        <article className="article__share-modal">
-          <div className="article__share-text">
-            <p>Share</p>
-          </div>
-          <div className="article__share-icons">
-            <FBIcon />
-            <TwIcon />
-            <PintIcon />
-          </div>
-          {isMobile && (
-            <div className="article__author-share active" onClick={handleClick}>
-              <div className="article__icon-container--active">
-                <ShareIcon color="#fff" />
-              </div>
+
+      <article
+        className={`article__share-modal ${isShareModalOpen ? "active" : ""}`}
+      >
+        <div className="article__share-text">
+          <p>Share</p>
+        </div>
+        <div className="article__share-icons">
+          <FBIcon />
+          <TwIcon />
+          <PintIcon />
+        </div>
+        {isMobile && (
+          <div className="article__author-share active" onClick={handleClick}>
+            <div className="article__icon-container--active">
+              <ShareIcon color="#fff" />
             </div>
-          )}
-        </article>
-      )}
+          </div>
+        )}
+      </article>
+
       {/* Share overlay ends here */}
     </>
   );

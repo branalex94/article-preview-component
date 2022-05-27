@@ -57,6 +57,5 @@ I'd like to better implement animation and conditional component rendering using
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- GitHub - [branalex94](https://github.com/branalex94)
+- Frontend Mentor - [@branalex94](https://www.frontendmentor.io/profile/branalex94)
